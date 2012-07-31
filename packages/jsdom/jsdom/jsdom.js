@@ -1,7 +1,5 @@
 var dom      = exports.dom = require("./level3/index").dom,
     features = require('./browser/documentfeatures'),
-    fs       = require("fs"),
-    pkg      = JSON.parse(fs.readFileSync(__dirname + "/../package.json")),
     request  = require('request'),
     URL      = require('url');
 
@@ -27,7 +25,7 @@ exports.debugMode = false;
 var createWindow = exports.createWindow = require("./jsdom/browser/index").createWindow;
 
 exports.__defineGetter__('version', function() {
-  return pkg.version;
+  return "0.0.1";
 });
 
 exports.level = function (level, feature) {
@@ -276,7 +274,7 @@ exports.env = exports.jsdom.env = function() {
         processHTML(err, body);
       });
     } else {
-      fs.readFile(config.html, processHTML);
+      //fs.readFile(config.html, processHTML);
     }
   }
 };
