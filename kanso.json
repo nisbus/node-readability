@@ -1,0 +1,14 @@
+{
+    "name": "readability",
+    "version": "0.1.0",
+    "description": "Arc90's readability.js adapted to node.js",
+    "attachments": ["index.html"],
+    "modules":[], 	
+    "dependencies":{
+	"attachments":null,
+	"modules":null,
+	"jsdom":null,
+	"readability":null
+
+    }
+}

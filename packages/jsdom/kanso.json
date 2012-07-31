@@ -1,0 +1,12 @@
+{
+	"name": "jsdom",
+	"description": "this is jsdom",
+	"version": "0.0.1",
+	"modules":["jsdom"],
+	"dependencies":{
+		"modules":null,
+		"url":null,
+	        "path":null,
+	        "assert":null
+	}
+}
