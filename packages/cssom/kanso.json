@@ -1,0 +1,9 @@
+{
+	"name": "cssom",
+	"description":"cssom",
+	"version":"0.0.1",
+	"modules":["cssom.js"],
+	"dependencies":{
+		"modules":null
+	}
+}

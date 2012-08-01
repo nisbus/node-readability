@@ -8,7 +8,7 @@
 	"attachments":null,
 	"modules":null,
 	"jsdom":null,
-	"readability":null
-
+	"readability":null,
+	"cssom":null
     }
 }

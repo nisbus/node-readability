@@ -3,9 +3,9 @@ var core                  = require("./core").dom.level2.core,
     applyDocumentFeatures = require('../browser/documentfeatures').applyDocumentFeatures,
     URL                   = require("url"),
     Path                  = require('path'),
-    fs                    = require("fs"),
-    http                  = require('http'),
-    https                 = require('https');
+//    fs                    = require("fs"),
+//    http                  = require('http'),
+//    https                 = require('https');
 
 // modify cloned instance for more info check: https://github.com/tmpvar/jsdom/issues/325
 core = Object.create(core);
@@ -89,7 +89,9 @@ core.resourceLoader = {
     }
 
     return URL.resolve(baseUrl, href);
-  },
+  }
+};
+/*
   download: function(url, referrer, callback) {
     var path    = url.pathname + (url.search || ''),
         options = {'method': 'GET', 'host': url.hostname, 'path': path},
@@ -140,10 +142,10 @@ core.resourceLoader = {
     request.end();
   },
   readFile: function(url, callback) {
-    fs.readFile(url.replace(/^file:\/\//, ""), 'utf8', callback);
+    //fs.readFile(url.replace(/^file:\/\//, ""), 'utf8', callback);
   }
 };
-
+*/
 function define(elementClass, def) {
   var tagName = def.tagName,
     tagNames = def.tagNames || (tagName? [tagName] : []),

@@ -1,11 +1,11 @@
-var http          = require('http'),
+var //http          = require('http'),
     URL           = require('url'),
     HtmlToDom     = require('./htmltodom').HtmlToDom,
     domToHtml     = require('./domtohtml').domToHtml,
     htmlencoding  = require('./htmlencoding'),
     HTMLEncode    = htmlencoding.HTMLEncode,
     HTMLDecode    = htmlencoding.HTMLDecode,
-    jsdom         = require('../../jsdom'),
+    jsdom         = require('../jsdom'),
     Contextify    = null;
 
 try {
@@ -248,6 +248,7 @@ exports.createWindow = function(dom, options) {
       };
       return cs;
     },
+
     console: {
       log:   function(message) { this._window.raise('log',   message) },
       info:  function(message) { this._window.raise('info',  message) },

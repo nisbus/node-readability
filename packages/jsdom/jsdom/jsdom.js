@@ -1,6 +1,6 @@
 var dom      = exports.dom = require("./level3/index").dom,
     features = require('./browser/documentfeatures'),
-    request  = require('request'),
+//    request  = require('request'),
     URL      = require('url');
 
 var style = require('./level2/style');
@@ -22,7 +22,7 @@ exports.windowAugmentation = require("./browser/index").windowAugmentation;
 
 exports.debugMode = false;
 
-var createWindow = exports.createWindow = require("./jsdom/browser/index").createWindow;
+var createWindow = exports.createWindow = require("./browser/index").createWindow;
 
 exports.__defineGetter__('version', function() {
   return "0.0.1";
@@ -30,7 +30,7 @@ exports.__defineGetter__('version', function() {
 
 exports.level = function (level, feature) {
 	if(!feature) feature = 'core'
-	return require('./jsdom/level' + level + '/' + feature).dom['level' + level][feature]
+	return require('./level' + level + '/' + feature).dom['level' + level][feature]
 }
 
 exports.jsdom = function (html, level, options) {
@@ -260,7 +260,7 @@ exports.env = exports.jsdom.env = function() {
     processHTML(null, config.html);
 
   // Handle url/file
-  } else {
+  } /*else {
     var url = URL.parse(config.html);
     config.url = config.url || url.href;
     if (url.hostname) {
@@ -276,7 +276,9 @@ exports.env = exports.jsdom.env = function() {
     } else {
       //fs.readFile(config.html, processHTML);
     }
+
   }
+*/
 };
 
 /*
