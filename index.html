@@ -3,6 +3,10 @@
 <script type="text/javascript" src="modules.js"></script>
 <script type="text/javascript">
 	var read = require("readability/readability");
+	var html = "<html><title>lol</title><body>This is the content I'm after</body></html>"
+	read.parse(html,"http://mbl.is",function(result){
+	    console.log(result.title,result.content);
+	});
 </script>
 </body>
 </html>
